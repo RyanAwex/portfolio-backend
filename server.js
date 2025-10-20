@@ -13,7 +13,7 @@ app.use(
     origin: [
       "http://localhost:5173",
       "https://portfolio-cyan-kappa-13.vercel.app",
-      "https://rayanesefiani.com",
+      "https://www.rayanesefiani.com",
     ],
     credentials: true,
   })
