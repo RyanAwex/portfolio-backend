@@ -8,7 +8,15 @@ const PORT = process.env.PORT || 5000;
 const app = express();
 
 app.use(express.json());
-app.use(cors());
+app.use(
+  cors({
+    origin: [
+      "http://localhost:5173",
+      "https://portfolio-cyan-kappa-13.vercel.app/",
+    ],
+    credentials: true,
+  })
+);
 
 app.use("/api/projects", projectsRoute);
 app.use("/api/skills", skillsRoute);
